@@ -1288,5 +1288,114 @@ button {
     margin-left: 0;
     margin-right: 0;
     float: left; } }
+header {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: dodgerblue;
+  color: navy; }
+  header::before, header::after {
+    content: ' ';
+    display: table; }
+  header::after {
+    clear: both; }
+  header h1 {
+    width: 66.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
+    @media screen and (min-width: 40em) {
+      header h1 {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    header h1:last-child:not(:first-child) {
+      float: right; }
+  header p {
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    text-align: right; }
+    @media screen and (min-width: 40em) {
+      header p {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    header p:last-child:not(:first-child) {
+      float: right; }
+  header #name {
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-top: 20px;
+    padding-right: 10px;
+    border: 2px solid navy; }
+    @media screen and (min-width: 40em) {
+      header #name {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    header #name:last-child:not(:first-child) {
+      float: right; }
+
+main {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto; }
+  main::before, main::after {
+    content: ' ';
+    display: table; }
+  main::after {
+    clear: both; }
+
+ul {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    ul {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  ul:last-child:not(:first-child) {
+    float: right; }
+
+footer {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px; }
+  footer::before, footer::after {
+    content: ' ';
+    display: table; }
+  footer::after {
+    clear: both; }
+
+#write {
+  width: 66.66667%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  @media screen and (min-width: 40em) {
+    #write {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  #write:last-child:not(:first-child) {
+    float: right; }
+
+button {
+  width: 16.66667%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding: 5px;
+  border: 1px solid navy;
+  background-color: dodgerblue;
+  color: navy; }
+  @media screen and (min-width: 40em) {
+    button {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  button:last-child:not(:first-child) {
+    float: right; }
 
 /*# sourceMappingURL=output.css.map */
