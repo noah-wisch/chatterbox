@@ -25,20 +25,19 @@ function getChat() {
 }
 
 function showChat(loyalUser) {
-    let from = 'From: ';
-    let text = 'Message: ';
 
-    let user = document.querySelector('#user');
-    user.textContent = loyalUser.from;
-
-    let message = document.querySelector('#content');
-    message.textContent = loyalUser.message;
-   
-    let messages = document.createElement('li');
-    messages.textContent = from + loyalUser.from + ' ' + text + loyalUser.message;
+    let message = document.createElement('li');
 
     let parent = document.querySelector('.messages');
-    parent.appendChild(messages);
+    parent.appendChild(message);
+
+        let user = document.createElement('p');
+        message.appendChild(user);
+        user.textContent = 'From: ' + loyalUser.from;
+
+        let content = document.createElement('p');
+        content.textContent = 'Message: ' + loyalUser.message;
+        message.appendChild(content);
 }
 
 // function submitChat() {

@@ -1346,18 +1346,18 @@ main {
     display: table; }
   main::after {
     clear: both; }
-
-ul {
-  width: 100%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem; }
-  @media screen and (min-width: 40em) {
-    ul {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  ul:last-child:not(:first-child) {
-    float: right; }
+  main ul {
+    width: 100%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    list-style: none; }
+    @media screen and (min-width: 40em) {
+      main ul {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    main ul:last-child:not(:first-child) {
+      float: right; }
 
 footer {
   max-width: 75rem;
@@ -1369,33 +1369,31 @@ footer {
     display: table; }
   footer::after {
     clear: both; }
-
-#write {
-  width: 66.66667%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem; }
-  @media screen and (min-width: 40em) {
-    #write {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  #write:last-child:not(:first-child) {
-    float: right; }
-
-button {
-  width: 16.66667%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding: 5px;
-  border: 1px solid navy;
-  background-color: dodgerblue;
-  color: navy; }
-  @media screen and (min-width: 40em) {
-    button {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  button:last-child:not(:first-child) {
-    float: right; }
+  footer button {
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding: 5px;
+    border: 1px solid navy;
+    background-color: dodgerblue;
+    color: navy; }
+    @media screen and (min-width: 40em) {
+      footer button {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    footer button:last-child:not(:first-child) {
+      float: right; }
+  footer #write {
+    width: 66.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
+    @media screen and (min-width: 40em) {
+      footer #write {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    footer #write:last-child:not(:first-child) {
+      float: right; }
 
 /*# sourceMappingURL=output.css.map */
