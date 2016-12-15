@@ -24,15 +24,21 @@ function getChat() {
     console.log('chat requested');
 }
 
-function showChat(loyaUser) {
+function showChat(loyalUser) {
+    let from = 'From: ';
+    let text = 'Message: ';
+
     let user = document.querySelector('#user');
-    user.textContent = loyaUser.from;
+    user.textContent = loyalUser.from;
 
     let message = document.querySelector('#content');
-    message.textContent = loyaUser.message;
+    message.textContent = loyalUser.message;
+   
+    let messages = document.createElement('li');
+    messages.textContent = from + loyalUser.from + ' ' + text + loyalUser.message;
 
-    // let parent = document.querySelector('.message');
-    // parent.appendChild(user);
+    let parent = document.querySelector('.messages');
+    parent.appendChild(messages);
 }
 
 // function submitChat() {
