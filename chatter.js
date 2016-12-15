@@ -13,9 +13,10 @@ function getChat() {
     request.addEventListener('load', function () {
         let response = JSON.parse(request.responseText);
 
-        for (let i = 0; i < response.chats.length; i++){
-        let chat = response.chats[i];
-        showChat(chat);
+        for (let i = 0; i < response.chats.length; i++) {
+            let chat = response.chats[i];
+            console.log(chat.from);
+            showChat(chat);
         }
     });
 
@@ -25,10 +26,13 @@ function getChat() {
 
 function showChat(loyaUser) {
     let user = document.querySelector('#user');
-    user.textContent = loyaUser.chats.from;
+    user.textContent = loyaUser.from;
 
-    let parent = document.querySelector('#message');
-    parent.appendChild(user);
+    let message = document.querySelector('#content');
+    message.textContent = loyaUser.message;
+
+    // let parent = document.querySelector('.message');
+    // parent.appendChild(user);
 }
 
 // function submitChat() {
