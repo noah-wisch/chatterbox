@@ -1288,12 +1288,15 @@ button {
     margin-left: 0;
     margin-right: 0;
     float: left; } }
+* {
+  font-family: sans-serif; }
+
 header {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: dodgerblue;
-  color: navy; }
+  background-color: #001F54;
+  color: #FEFCFB; }
   header::before, header::after {
     content: ' ';
     display: table; }
@@ -1329,7 +1332,9 @@ header {
     padding-right: 0.625rem;
     margin-top: 20px;
     padding-right: 10px;
-    border: 2px solid navy; }
+    border: 2px solid #FEFCFB;
+    border-radius: 4px;
+    background-color: #FEFCFB; }
     @media screen and (min-width: 40em) {
       header #name {
         padding-left: 0.9375rem;
@@ -1340,7 +1345,11 @@ header {
 main {
   max-width: 75rem;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow: scroll;
+  height: 700px;
+  border: 2px solid #1282A2;
+  background-color: #FEFCFB; }
   main::before, main::after {
     content: ' ';
     display: table; }
@@ -1363,7 +1372,8 @@ footer {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px; }
+  background-color: #001F54;
+  padding: 10px 0; }
   footer::before, footer::after {
     content: ' ';
     display: table; }
@@ -1374,10 +1384,11 @@ footer {
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    padding: 5px;
-    border: 1px solid navy;
-    background-color: dodgerblue;
-    color: navy; }
+    padding: 15px 2px;
+    border: 1px solid #FEFCFB;
+    background-color: #034078;
+    color: #FEFCFB;
+    border-radius: 4px; }
     @media screen and (min-width: 40em) {
       footer button {
         padding-left: 0.9375rem;
@@ -1388,12 +1399,22 @@ footer {
     width: 66.66667%;
     float: left;
     padding-left: 0.625rem;
-    padding-right: 0.625rem; }
+    padding-right: 0.625rem;
+    border-radius: 4px;
+    padding-top: 19.5px;
+    background-color: #FEFCFB;
+    font-size: 1.3em; }
     @media screen and (min-width: 40em) {
       footer #write {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
     footer #write:last-child:not(:first-child) {
       float: right; }
+  footer #sent:hover {
+    background-color: #1282A2;
+    color: #0A1128; }
+  footer #receive:hover {
+    background-color: #1282A2;
+    color: #0A1128; }
 
 /*# sourceMappingURL=output.css.map */

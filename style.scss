@@ -4,10 +4,14 @@
 @include foundation-grid;
 
 $default-font-type: Garamond;
-$default-color:navy;
-$header-background-color:dodgerblue;
-$chat-background-color:gray;
+$default-color:#FEFCFB;
+$header-background-color:#001F54;
+$border-radius:4px;
+// $chat-background-color:gray;
 
+* {
+    font-family:sans-serif;
+}
 
 header{
     @include grid-row();
@@ -28,35 +32,54 @@ header{
         margin-top:20px;
         padding-right:10px;
         border:2px solid $default-color; 
+        border-radius:$border-radius;
+        background-color:$default-color;
     }
 }
 
 main {
     @include grid-row();
+    overflow:scroll;
+    height:700px;
+    border:2px solid #1282A2;
+    background-color:$default-color;
 
     ul{
         @include grid-column(12);
-        // border:2px solid lightgray;
         list-style:none;
     }
 }
 
 footer{
     @include grid-row();
-    margin-top:100px;
+    background-color:$header-background-color;
+    padding:10px 0;
     
     button{
         @include grid-column(2);
-        padding:5px;
+        padding:15px 2px;
         border:1px solid $default-color;
-        background-color:$header-background-color;
+        background-color:#034078;
         color:$default-color;
-    
+        border-radius:$border-radius;    
     }
 
     #write{
         @include grid-column(8);
-   
+        border-radius:$border-radius;
+        padding-top:19.5px;
+        background-color:$default-color;
+        font-size:1.3em;
+    }
+
+    #sent:hover {
+        background-color:#1282A2;
+        color:#0A1128;
+    }
+
+     #receive:hover {
+        background-color:#1282A2;
+        color:#0A1128;
     }
 }
 
