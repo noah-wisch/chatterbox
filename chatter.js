@@ -1,7 +1,9 @@
 function init() {
-    //getChat();
+    getChat();
     let getMessage = document.querySelector('#receive');
     getMessage.addEventListener('click', getChat);
+    let send = document.querySelector('#sent');
+    send.addEventListener('click', submitChat);
 
     // let sendMessage = document.querySelector('#sent');
     // sendMessage.addEventListener('click', submitChat);
@@ -40,15 +42,23 @@ function showChat(loyalUser) {
         message.appendChild(content);
 }
 
-// function submitChat() {
-//     let request = new XMLHttpRequest();
-//     request.open('POST', 'http://api.queencityiron.com/chats');
-//     request.addEventListener('load', function () {
-//         let response = JSON.parse(request.responseText);
-//     });
-//     request.send();
-//     console.log('chat sent');
-// }
+function submitChat() {
+    console.log('good');
+    let request = new XMLHttpRequest();
+    request.open('POST', 'http://api.queencityiron.com/chats');
+    // on load, getChat();
+
+//  body variable from below would go here!
+    request.send('variable name from below');
+}
 
 window.addEventListener('load', init);
+
+
+/**
+ * let body = JSON.stringify({
+ *      title: document.querySelector.... CONTENT
+ *      author: document.querySelector.... NAME
+ * }):
+ */
 
