@@ -22,18 +22,20 @@ header {
         @include grid-column(8);  
     }
 
-    p {
-        @include grid-column(2);
-        text-align:right;
+  p {
+        @include grid-column(1);
+        // text-align:right;
     }
 
     #name {
-        @include grid-column(2);
-        margin-top:20px;
-        padding-right:10px;
+        @include grid-column(3);
+        margin-top:16px;
+        // margin-right:5px;
+        // padding-right:10px;
         border:2px solid $default-color; 
         border-radius:$border-radius;
         background-color:$default-color;
+        color:black;
     }
 }
 
@@ -53,20 +55,28 @@ main {
 
     .inMessages {
         @include grid-column(6);
-        background-color: lightgray;
         list-style: none;
+        // text-align:left;
 
-        li{
-        margin:5px;
-        border:2px solid white;
+        li {
+            border-radius:10px;
+            background-color:#F7F7F7;
+        // margin:5px;
+        // border:2px solid white;
         }
     }
 
     .outMessages {
         @include grid-column(6);
          list-style: none;
-         background-color:darkgray;
-     
+        //  text-align:right;
+
+        li {
+            border-radius:10px;
+            background-color:#007AFF;
+        // margin:5px;
+        // border:2px solid white;
+        }
     }
 }
 
@@ -87,9 +97,11 @@ footer {
     #write {
         @include grid-column(8);
         border-radius:$border-radius;
-        padding-top:19.5px;
+        // padding-top:19.5px;
+        height:48px;
         background-color:$default-color;
         font-size:1.3em;
+        overflow:auto;
     }
 
     #sent:hover {

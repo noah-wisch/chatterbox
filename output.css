@@ -1314,11 +1314,10 @@ header {
     header h1:last-child:not(:first-child) {
       float: right; }
   header p {
-    width: 16.66667%;
+    width: 8.33333%;
     float: left;
     padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    text-align: right; }
+    padding-right: 0.625rem; }
     @media screen and (min-width: 40em) {
       header p {
         padding-left: 0.9375rem;
@@ -1326,15 +1325,15 @@ header {
     header p:last-child:not(:first-child) {
       float: right; }
   header #name {
-    width: 16.66667%;
+    width: 25%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    margin-top: 20px;
-    padding-right: 10px;
+    margin-top: 16px;
     border: 2px solid #FEFCFB;
     border-radius: 4px;
-    background-color: #FEFCFB; }
+    background-color: #FEFCFB;
+    color: black; }
     @media screen and (min-width: 40em) {
       header #name {
         padding-left: 0.9375rem;
@@ -1366,7 +1365,6 @@ main {
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    background-color: lightgray;
     list-style: none; }
     @media screen and (min-width: 40em) {
       main .inMessages {
@@ -1375,21 +1373,23 @@ main {
     main .inMessages:last-child:not(:first-child) {
       float: right; }
     main .inMessages li {
-      margin: 5px;
-      border: 2px solid white; }
+      border-radius: 10px;
+      background-color: #F7F7F7; }
   main .outMessages {
     width: 50%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    list-style: none;
-    background-color: darkgray; }
+    list-style: none; }
     @media screen and (min-width: 40em) {
       main .outMessages {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
     main .outMessages:last-child:not(:first-child) {
       float: right; }
+    main .outMessages li {
+      border-radius: 10px;
+      background-color: #007AFF; }
 
 footer {
   max-width: 75rem;
@@ -1424,9 +1424,10 @@ footer {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     border-radius: 4px;
-    padding-top: 19.5px;
+    height: 48px;
     background-color: #FEFCFB;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    overflow: auto; }
     @media screen and (min-width: 40em) {
       footer #write {
         padding-left: 0.9375rem;

@@ -19,7 +19,6 @@ function getChat() {
             showChat(chat);
         }
     });
-
     request.send();
     // console.log('chat requested');
 }
