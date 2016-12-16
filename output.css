@@ -1288,15 +1288,14 @@ button {
     margin-left: 0;
     margin-right: 0;
     float: left; } }
-* {
-  font-family: sans-serif; }
-
 header {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   background-color: #001F54;
-  color: #FEFCFB; }
+  color: #FEFCFB;
+  max-width: none;
+  height: 12vh; }
   header::before, header::after {
     content: ' ';
     display: table; }
@@ -1367,7 +1366,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   overflow: scroll;
-  height: 700px;
+  height: 80vh;
   border: 2px solid #1282A2;
   background-color: #FEFCFB;
   /*ul{*/
@@ -1394,8 +1393,10 @@ main {
     main .inMessages:last-child:not(:first-child) {
       float: right; }
     main .inMessages li {
-      border-radius: 10px;
-      background-color: #F7F7F7; }
+      border-radius: 45px;
+      background-color: #DBDDDE; }
+      main .inMessages li p {
+        margin-left: 20px; }
   main .outMessages {
     width: 50%;
     float: left;
@@ -1417,7 +1418,13 @@ footer {
   margin-left: auto;
   margin-right: auto;
   background-color: #001F54;
-  padding: 10px 0; }
+  padding: 10px 0;
+  max-width: none;
+  position: absolute;
+  height: 8vh;
+  bottom: 0;
+  left: 0;
+  right: 0; }
   footer::before, footer::after {
     content: ' ';
     display: table; }

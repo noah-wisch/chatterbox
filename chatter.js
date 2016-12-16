@@ -1,7 +1,7 @@
 function init() {
     getChat();
     let getMessage = document.querySelector('#receive');
-    getMessage.addEventListener('click', getChat);
+    getMessage.addEventListener('click', showChat);
     let send = document.querySelector('#sent');
     send.addEventListener('click', submitChat);
 
@@ -15,6 +15,11 @@ function getChat() {
 
         for (let i = 0; i < response.chats.length; i++) {
             let chat = response.chats[i];
+
+            for (let j = 0; j < i.length; j++) {
+                let newestChat = response.chats[j];
+                showChat(newestChat);
+            }
             console.log(chat.from);
             showChat(chat);
         }
