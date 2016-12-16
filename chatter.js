@@ -10,7 +10,7 @@ function init() {
 function getChat() {
     let request = new XMLHttpRequest();
     request.open('GET', 'http://api.queencityiron.com/chats');
-    request.addEventListener('load', function () {
+    request.addEventListener('load', function() {
         let response = JSON.parse(request.responseText);
 
         for (let i = 0; i < response.chats.length; i++) {
@@ -21,7 +21,7 @@ function getChat() {
     });
 
     request.send();
-    console.log('chat requested');
+    // console.log('chat requested');
 }
 
 function showChat(loyalUser) {
@@ -31,13 +31,13 @@ function showChat(loyalUser) {
     let parent = document.querySelector('.inMessages');
     parent.appendChild(message);
 
-        let user = document.createElement('p');
-        message.appendChild(user);
-        user.textContent = 'From: ' + loyalUser.from;
+    let user = document.createElement('p');
+    message.appendChild(user);
+    user.textContent = 'From: ' + loyalUser.from;
 
-        let content = document.createElement('p');
-        content.textContent = 'Message: ' + loyalUser.message;
-        message.appendChild(content);
+    let content = document.createElement('p');
+    content.textContent = 'Message: ' + loyalUser.message;
+    message.appendChild(content);
 }
 
 function submitChat() {
@@ -46,25 +46,24 @@ function submitChat() {
     request.open('POST', 'http://api.queencityiron.com/chats');
     // on load, getChat();
     let body = JSON.stringify({
-      message: document.querySelector('#write').value,
-      from: document.querySelector('#name').value,
- });
+        message: document.querySelector('#write').value,
+        from: document.querySelector('#name').value,
+    });
+    request.send(body);
 
-//  body variable from below would go here!
     let chat = {
         message: document.querySelector('#write').value,
-        from: document.querySelector('#name').value,    
-}
-   // We can call the showChat function at any time. 
-//    Up above, we are showing chats we got from the api.
-// Down here, we are just calling showChat to display
-// the message we wrote and submitted without clicking
-// Get Message.
+        from: document.querySelector('#name').value,
+    }
+    // We can call the showChat function at any time. 
+    // Up above, we are showing chats we got from the api.
+    // Down here, we are just calling showChat to display
+    // the message we wrote and submitted without clicking
+    // Get Message.
 
     showChat(chat);
-    document.querySelector('#write').value=("");
-    document.querySelector('#name').value=("");
-    request.send(body);
+    document.querySelector('#write').value = ("");
+    document.querySelector('#name').value = ("");
 }
 
 window.addEventListener('load', init);
