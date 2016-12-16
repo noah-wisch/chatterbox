@@ -46,12 +46,22 @@ function submitChat() {
     request.open('POST', 'http://api.queencityiron.com/chats');
     // on load, getChat();
     let body = JSON.stringify({
-      message: document.querySelector('#write'),
-      from: document.querySelector('#name'),
- })
+      message: document.querySelector('#write').value,
+      from: document.querySelector('#name').value,
+ });
 
 //  body variable from below would go here!
+    let chat = {
+        message: document.querySelector('#write').value,
+        from: document.querySelector('#name').value,    
+}
+   // We can call the showChat function at any time. 
+//    Up above, we are showing chats we got from the api.
+// Down here, we are just calling showChat to display
+// the message we wrote and submitted without clicking
+// Get Message.
 
+    showChat(chat);
     document.querySelector('#write').value=("");
     document.querySelector('#name').value=("");
     request.send(body);
