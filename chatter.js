@@ -28,7 +28,7 @@ function showChat(loyalUser) {
 
     let message = document.createElement('li');
 
-    let parent = document.querySelector('.messages');
+    let parent = document.querySelector('.inMessages');
     parent.appendChild(message);
 
         let user = document.createElement('p');

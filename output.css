@@ -1349,23 +1349,46 @@ main {
   overflow: scroll;
   height: 700px;
   border: 2px solid #1282A2;
-  background-color: #FEFCFB; }
+  background-color: #FEFCFB;
+  /*ul{*/
+  /*@include grid-column(12);*/
+  /*list-style:none;*/
+  /*background-color: yellow;
+  margin: 5px;*/
+  /*}*/ }
   main::before, main::after {
     content: ' ';
     display: table; }
   main::after {
     clear: both; }
-  main ul {
-    width: 100%;
+  main .inMessages {
+    width: 50%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+    background-color: lightgray;
     list-style: none; }
     @media screen and (min-width: 40em) {
-      main ul {
+      main .inMessages {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
-    main ul:last-child:not(:first-child) {
+    main .inMessages:last-child:not(:first-child) {
+      float: right; }
+    main .inMessages li {
+      margin: 5px;
+      border: 2px solid white; }
+  main .outMessages {
+    width: 50%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    list-style: none;
+    background-color: darkgray; }
+    @media screen and (min-width: 40em) {
+      main .outMessages {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    main .outMessages:last-child:not(:first-child) {
       float: right; }
 
 footer {
