@@ -22,21 +22,28 @@ header {
         @include grid-column(8);  
     }
 
+    #fix {
+        @include grid-column(4);
+        @include grid-row();
+        // margin-top: 35px;
+
   p {
-        @include grid-column(1);
-        // text-align:right;
+        @include grid-column(4);
+        margin-top: 35px;
+        text-align:right;
     }
 
     #name {
-        @include grid-column(3);
-        margin-top:16px;
-        // margin-right:5px;
+        @include grid-column(8);
+        margin-top: 35px;
+        //margin-right: 50px;
         // padding-right:10px;
         border:2px solid $default-color; 
         border-radius:$border-radius;
         background-color:$default-color;
         color:black;
     }
+}
 }
 
 main {

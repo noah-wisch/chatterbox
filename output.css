@@ -1313,33 +1313,54 @@ header {
         padding-right: 0.9375rem; } }
     header h1:last-child:not(:first-child) {
       float: right; }
-  header p {
-    width: 8.33333%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
-    @media screen and (min-width: 40em) {
-      header p {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem; } }
-    header p:last-child:not(:first-child) {
-      float: right; }
-  header #name {
-    width: 25%;
+  header #fix {
+    width: 33.33333%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    margin-top: 16px;
-    border: 2px solid #FEFCFB;
-    border-radius: 4px;
-    background-color: #FEFCFB;
-    color: black; }
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto; }
     @media screen and (min-width: 40em) {
-      header #name {
+      header #fix {
         padding-left: 0.9375rem;
         padding-right: 0.9375rem; } }
-    header #name:last-child:not(:first-child) {
+    header #fix:last-child:not(:first-child) {
       float: right; }
+    header #fix::before, header #fix::after {
+      content: ' ';
+      display: table; }
+    header #fix::after {
+      clear: both; }
+    header #fix p {
+      width: 33.33333%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      margin-top: 35px;
+      text-align: right; }
+      @media screen and (min-width: 40em) {
+        header #fix p {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem; } }
+      header #fix p:last-child:not(:first-child) {
+        float: right; }
+    header #fix #name {
+      width: 66.66667%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      margin-top: 35px;
+      border: 2px solid #FEFCFB;
+      border-radius: 4px;
+      background-color: #FEFCFB;
+      color: black; }
+      @media screen and (min-width: 40em) {
+        header #fix #name {
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem; } }
+      header #fix #name:last-child:not(:first-child) {
+        float: right; }
 
 main {
   max-width: 75rem;
