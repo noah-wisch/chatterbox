@@ -4,13 +4,14 @@
 @include foundation-grid;
 
 $default-font-type: Garamond;
-$default-color:#FEFCFB;
-$header-background-color:#001F54;
+$default-color:#F7FFF7;
+$header-background-color:#4ECDC4;
 $border-radius:4px;
 
-// html, body {
-//     height:100vh;
-// }
+html, body {
+    font-family:'Baloo Thambi'; 
+    background-color:$default-color;
+}
 
 header {
     @include grid-row();
@@ -20,7 +21,7 @@ header {
     height:12vh;
 
     h1 {
-        @include grid-column(8);  
+        @include grid-column(8); 
     }
 
     #fix {
@@ -49,27 +50,20 @@ main {
     @include grid-row();
     overflow:scroll;
     height:80vh;
-    border:2px solid #1282A2;
-    background-color:$default-color;
-
-    /*ul{*/
-        /*@include grid-column(12);*/
-        /*list-style:none;*/
-          /*background-color: yellow;
-          margin: 5px;*/
-    /*}*/
+    border:2px solid $header-background-color;
+    background-color:#FFF;
+    max-width:85%;
 
     .inMessages {
         @include grid-column(6);
         list-style: none;
-        // text-align:left;
 
         li {
             border-radius:45px;
-            background-color:#DBDDDE;
+            background-color:#FFAEAE;
 
             p {
-                margin-left:20px;
+                margin-left:30px;
             }
         }
     }
@@ -77,13 +71,10 @@ main {
     .outMessages {
         @include grid-column(6);
          list-style: none;
-        //  text-align:right;
 
         li {
             border-radius:10px;
             background-color:#007AFF;
-        // margin:5px;
-        // border:2px solid white;
         }
     }
 }
@@ -103,7 +94,7 @@ footer {
         @include grid-column(2);
         padding:15px 2px;
         border:1px solid $default-color;
-        background-color:#034078;
+        background-color:#1A535C;
         color:$default-color;
         border-radius:$border-radius;    
     }
@@ -119,13 +110,13 @@ footer {
     }
 
     #sent:hover {
-        background-color:#1282A2;
-        color:#0A1128;
+        background-color:#FFE66D;
+        color:#1A535C;
     }
 
      #receive:hover {
-        background-color:#1282A2;
-        color:#0A1128;
+        background-color:#FFE66D;
+        color:#1A535C;
     }
 }
 

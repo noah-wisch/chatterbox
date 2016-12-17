@@ -1288,12 +1288,16 @@ button {
     margin-left: 0;
     margin-right: 0;
     float: left; } }
+html, body {
+  font-family: 'Baloo Thambi';
+  background-color: #F7FFF7; }
+
 header {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #001F54;
-  color: #FEFCFB;
+  background-color: #4ECDC4;
+  color: #F7FFF7;
   max-width: none;
   height: 12vh; }
   header::before, header::after {
@@ -1350,9 +1354,9 @@ header {
       padding-left: 0.625rem;
       padding-right: 0.625rem;
       margin-top: 35px;
-      border: 2px solid #FEFCFB;
+      border: 2px solid #F7FFF7;
       border-radius: 4px;
-      background-color: #FEFCFB;
+      background-color: #F7FFF7;
       color: black; }
       @media screen and (min-width: 40em) {
         header #fix #name {
@@ -1367,14 +1371,9 @@ main {
   margin-right: auto;
   overflow: scroll;
   height: 80vh;
-  border: 2px solid #1282A2;
-  background-color: #FEFCFB;
-  /*ul{*/
-  /*@include grid-column(12);*/
-  /*list-style:none;*/
-  /*background-color: yellow;
-  margin: 5px;*/
-  /*}*/ }
+  border: 2px solid #4ECDC4;
+  background-color: #FFF;
+  max-width: 85%; }
   main::before, main::after {
     content: ' ';
     display: table; }
@@ -1394,9 +1393,9 @@ main {
       float: right; }
     main .inMessages li {
       border-radius: 45px;
-      background-color: #DBDDDE; }
+      background-color: #FFAEAE; }
       main .inMessages li p {
-        margin-left: 20px; }
+        margin-left: 30px; }
   main .outMessages {
     width: 50%;
     float: left;
@@ -1417,7 +1416,7 @@ footer {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #001F54;
+  background-color: #4ECDC4;
   padding: 10px 0;
   max-width: none;
   position: absolute;
@@ -1436,9 +1435,9 @@ footer {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     padding: 15px 2px;
-    border: 1px solid #FEFCFB;
-    background-color: #034078;
-    color: #FEFCFB;
+    border: 1px solid #F7FFF7;
+    background-color: #1A535C;
+    color: #F7FFF7;
     border-radius: 4px; }
     @media screen and (min-width: 40em) {
       footer button {
@@ -1453,7 +1452,7 @@ footer {
     padding-right: 0.625rem;
     border-radius: 4px;
     height: 48px;
-    background-color: #FEFCFB;
+    background-color: #F7FFF7;
     font-size: 1.3em;
     overflow: auto; }
     @media screen and (min-width: 40em) {
@@ -1463,10 +1462,10 @@ footer {
     footer #write:last-child:not(:first-child) {
       float: right; }
   footer #sent:hover {
-    background-color: #1282A2;
-    color: #0A1128; }
+    background-color: #FFE66D;
+    color: #1A535C; }
   footer #receive:hover {
-    background-color: #1282A2;
-    color: #0A1128; }
+    background-color: #FFE66D;
+    color: #1A535C; }
 
 /*# sourceMappingURL=output.css.map */

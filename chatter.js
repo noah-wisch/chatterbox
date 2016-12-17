@@ -16,10 +16,11 @@ function getChat() {
         for (let i = 0; i < response.chats.length; i++) {
             let chat = response.chats[i];
 
-            for (let j = 0; j < i.length; j++) {
-                let newestChat = response.chats[j];
-                showChat(newestChat);
-            }
+            // for (let j = 0; j < i.length; j++) {
+            //     let newestChat = response.chats[j];
+            //     showChat(newestChat);
+            // }
+            //tried to use this ^^^ for loop to get the new messages, didn't work though
             console.log(chat.from);
             showChat(chat);
         }
