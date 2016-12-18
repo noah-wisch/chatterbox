@@ -7,6 +7,7 @@ $default-font-type: Garamond;
 $default-color:#F7FFF7;
 $header-background-color:#4ECDC4;
 $border-radius:4px;
+$large-screen: 700px;
 
 html, body {
     font-family:'Baloo Thambi'; 
@@ -18,30 +19,51 @@ header {
     background-color:$header-background-color;
     color:$default-color;
     max-width:none;
+    @include breakpoint ($large-screen) {
     height:12vh;
+    }
 
     h1 {
-        @include grid-column(8); 
+        //margin: 0 auto;
+        text-align: center;
+        @include breakpoint($large-screen) {
+        @include grid-column(8);
+        text-align: left;
+        }
     }
 
     #fix {
+        background-color:$header-background-color;
+        @include breakpoint ($large-screen) {
         @include grid-column(4);
         @include grid-row();
         // margin-top: 35px;
+        }
 
   p {
+        margin-top: 2px;
+        @include grid-column (2);
+        @include breakpoint ($large-screen) {
         @include grid-column(4);
         margin-top: 35px;
         text-align:right;
+        }
     }
 
     #name {
-        @include grid-column(8);
-        margin-top: 35px;;
-        border:2px solid $default-color; 
-        border-radius:$border-radius;
-        background-color:$default-color;
-        color:black;
+        @include grid-column (10);
+        margin-right: 25px;
+        width: 75%;
+        //margin-top: 5px;
+        border: 2px solid $default-color; 
+        border-radius: $border-radius;
+        background-color: $default-color;
+        color: black;
+        @include breakpoint ($large-screen) {
+            @include grid-column (8);
+            margin-right: 0;
+            margin-top: 35px;
+        }
     }
 }
 }
@@ -91,22 +113,29 @@ footer {
     right:0;
     
     button {
-        @include grid-column(2);
+        @include grid-column (6);
+        margin-top: 3px;
         padding:15px 2px;
         border:1px solid $default-color;
         background-color:#1A535C;
         color:$default-color;
-        border-radius:$border-radius;    
+        border-radius:$border-radius;
+        @include breakpoint ($large-screen) {
+            @include grid-column(2)
+        }    
     }
 
     #write {
-        @include grid-column(8);
+        @include grid-column(12);
         border-radius:$border-radius;
         // padding-top:19.5px;
         height:48px;
         background-color:$default-color;
         font-size:1.3em;
         overflow:auto;
+        @include breakpoint ($large-screen) {
+            @include grid-column(8)
+        }
     }
 
     #sent:hover {

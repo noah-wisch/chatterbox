@@ -1298,62 +1298,88 @@ header {
   margin-right: auto;
   background-color: #4ECDC4;
   color: #F7FFF7;
-  max-width: none;
-  height: 12vh; }
+  max-width: none; }
   header::before, header::after {
     content: ' ';
     display: table; }
   header::after {
     clear: both; }
+  @media screen and (min-width: 43.75em) {
+    header {
+      height: 12vh; } }
   header h1 {
-    width: 66.66667%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem; }
-    @media screen and (min-width: 40em) {
+    text-align: center; }
+    @media screen and (min-width: 43.75em) {
       header h1 {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem; } }
-    header h1:last-child:not(:first-child) {
-      float: right; }
+        width: 66.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        text-align: left; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    header h1 {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 43.75em) {
+        header h1:last-child:not(:first-child) {
+          float: right; } }
   header #fix {
-    width: 33.33333%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto; }
-    @media screen and (min-width: 40em) {
+    background-color: #4ECDC4; }
+    @media screen and (min-width: 43.75em) {
       header #fix {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem; } }
-    header #fix:last-child:not(:first-child) {
-      float: right; }
-    header #fix::before, header #fix::after {
-      content: ' ';
-      display: table; }
-    header #fix::after {
-      clear: both; }
+        width: 33.33333%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    header #fix {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 43.75em) {
+        header #fix:last-child:not(:first-child) {
+          float: right; }
+        header #fix::before, header #fix::after {
+          content: ' ';
+          display: table; }
+        header #fix::after {
+          clear: both; } }
     header #fix p {
-      width: 33.33333%;
+      margin-top: 2px;
+      width: 16.66667%;
       float: left;
       padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      margin-top: 35px;
-      text-align: right; }
+      padding-right: 0.625rem; }
       @media screen and (min-width: 40em) {
         header #fix p {
           padding-left: 0.9375rem;
           padding-right: 0.9375rem; } }
       header #fix p:last-child:not(:first-child) {
         float: right; }
+      @media screen and (min-width: 43.75em) {
+        header #fix p {
+          width: 33.33333%;
+          float: left;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          margin-top: 35px;
+          text-align: right; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    header #fix p {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+      @media screen and (min-width: 43.75em) {
+          header #fix p:last-child:not(:first-child) {
+            float: right; } }
     header #fix #name {
-      width: 66.66667%;
+      width: 83.33333%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem;
-      margin-top: 35px;
+      margin-right: 25px;
+      width: 75%;
       border: 2px solid #F7FFF7;
       border-radius: 4px;
       background-color: #F7FFF7;
@@ -1364,6 +1390,21 @@ header {
           padding-right: 0.9375rem; } }
       header #fix #name:last-child:not(:first-child) {
         float: right; }
+      @media screen and (min-width: 43.75em) {
+        header #fix #name {
+          width: 66.66667%;
+          float: left;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          margin-right: 0;
+          margin-top: 35px; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    header #fix #name {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+      @media screen and (min-width: 43.75em) {
+          header #fix #name:last-child:not(:first-child) {
+            float: right; } }
 
 main {
   max-width: 75rem;
@@ -1430,10 +1471,11 @@ footer {
   footer::after {
     clear: both; }
   footer button {
-    width: 16.66667%;
+    width: 50%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+    margin-top: 3px;
     padding: 15px 2px;
     border: 1px solid #F7FFF7;
     background-color: #1A535C;
@@ -1445,8 +1487,21 @@ footer {
         padding-right: 0.9375rem; } }
     footer button:last-child:not(:first-child) {
       float: right; }
+    @media screen and (min-width: 43.75em) {
+      footer button {
+        width: 16.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    footer button {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 43.75em) {
+        footer button:last-child:not(:first-child) {
+          float: right; } }
   footer #write {
-    width: 66.66667%;
+    width: 100%;
     float: left;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -1461,6 +1516,19 @@ footer {
         padding-right: 0.9375rem; } }
     footer #write:last-child:not(:first-child) {
       float: right; }
+    @media screen and (min-width: 43.75em) {
+      footer #write {
+        width: 66.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem; } }
+  @media screen and (min-width: 43.75em) and (min-width: 40em) {
+    footer #write {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 43.75em) {
+        footer #write:last-child:not(:first-child) {
+          float: right; } }
   footer #sent:hover {
     background-color: #FFE66D;
     color: #1A535C; }
