@@ -1437,21 +1437,6 @@ main {
       background-color: #FFAEAE; }
       main .inMessages li p {
         margin-left: 30px; }
-  main .outMessages {
-    width: 50%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    list-style: none; }
-    @media screen and (min-width: 40em) {
-      main .outMessages {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem; } }
-    main .outMessages:last-child:not(:first-child) {
-      float: right; }
-    main .outMessages li {
-      border-radius: 10px;
-      background-color: #007AFF; }
 
 footer {
   max-width: 75rem;

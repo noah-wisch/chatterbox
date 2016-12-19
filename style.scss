@@ -63,9 +63,9 @@ header {
             @include grid-column (8);
             margin-right: 0;
             margin-top: 35px;
+            }
         }
-    }
-}
+    }   
 }
 
 main {
@@ -90,15 +90,16 @@ main {
         }
     }
 
-    .outMessages {
-        @include grid-column(6);
-         list-style: none;
+    // .outMessages {
+    //     @include grid-column(6);
+    //      list-style: none;
 
-        li {
-            border-radius:10px;
-            background-color:#007AFF;
-        }
-    }
+    //     li {
+    //         border-radius:45px;
+    //         background-color:#007AFF;
+    //         margin-left:100px;
+    //     }
+    // }
 }
 
 footer {

@@ -23,6 +23,7 @@ function getChat() {
             //tried to use this ^^^ for loop to get the new messages, didn't work though
             console.log(chat.from);
             showChat(chat);
+            //setInterval(function(){ showChat() }, 3000);
         }
     });
     request.send();
@@ -45,7 +46,23 @@ function showChat(loyalUser) {
     message.appendChild(content);
 }
 
-function submitChat() {
+// function sentChats(loyalUser) {
+
+//     let message = document.createElement('li');
+
+//     let parent = document.querySelector('.outMessages');
+//     parent.appendChild(message);
+
+//     let user = document.createElement('p');
+//     message.appendChild(user);
+//     user.textContent = 'From: ' + loyalUser.from;
+
+//     let content = document.createElement('p');
+//     content.textContent = 'Message: ' + loyalUser.message;
+//     message.appendChild(content);
+// }
+
+function submitChat(submitted) {
     console.log('good');
     let request = new XMLHttpRequest();
     request.open('POST', 'http://api.queencityiron.com/chats');
